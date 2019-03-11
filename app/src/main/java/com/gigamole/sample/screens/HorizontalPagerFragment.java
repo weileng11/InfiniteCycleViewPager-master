@@ -38,10 +38,11 @@ public class HorizontalPagerFragment extends Fragment {
                 AnimationUtils.loadInterpolator(getContext(), android.R.anim.overshoot_interpolator)
         );
         horizontalInfiniteCycleViewPager.setMediumScaled(false);
-        horizontalInfiniteCycleViewPager.setMaxPageScale(0.8F);
-        horizontalInfiniteCycleViewPager.setMinPageScale(0.5F);
-        horizontalInfiniteCycleViewPager.setCenterPageScaleOffset(30.0F);
-        horizontalInfiniteCycleViewPager.setMinPageScaleOffset(5.0F);
+        horizontalInfiniteCycleViewPager.setMaxPageScale(0.75F);
+        horizontalInfiniteCycleViewPager.setMinPageScale(0.65F);
+        horizontalInfiniteCycleViewPager.setPageMargin(20);
+        //horizontalInfiniteCycleViewPager.setCenterPageScaleOffset(10.0F);
+        //horizontalInfiniteCycleViewPager.setMinPageScaleOffset(5.0F);
         //horizontalInfiniteCycleViewPager.setOnInfiniteCyclePageTransformListener();
 
         horizontalInfiniteCycleViewPager.setCurrentItem(

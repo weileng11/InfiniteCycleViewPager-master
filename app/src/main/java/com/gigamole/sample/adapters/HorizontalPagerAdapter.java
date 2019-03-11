@@ -2,13 +2,12 @@ package com.gigamole.sample.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.view.*;
-import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import com.gigamole.infinitecycleviewpager.VerticalInfiniteCycleViewPager;
 import com.gigamole.sample.R;
 import com.gigamole.sample.utils.Utils;
-
-import static com.gigamole.sample.utils.Utils.setupItem;
 
 /**
  * Created by GIGAMOLE on 7/27/16.
@@ -31,7 +30,11 @@ public class HorizontalPagerAdapter extends PagerAdapter {
             new Utils.LibraryObject(
                     R.drawable.ic_qa,
                     "Quality Assurance"
-            )
+            ),
+		    new Utils.LibraryObject(
+				    R.drawable.ic_qa,
+				    "Quality Assurance222"
+		    )
     };
 
     private Context mContext;
@@ -68,14 +71,14 @@ public class HorizontalPagerAdapter extends PagerAdapter {
             );
             verticalInfiniteCycleViewPager.setCurrentItem(position);
         } else {
-            view = mLayoutInflater.inflate(R.layout.item, container, false);
-            view.findViewById(R.id.card).setOnClickListener(new View.OnClickListener(){
-	            @Override
-	            public void onClick(View v){
-		            Toast.makeText(mContext,"点击了"+position,Toast.LENGTH_LONG);
-	            }
-            });
-            setupItem(view, LIBRARIES[position]);
+            view = mLayoutInflater.inflate(R.layout.banner_item, container, false);
+            //view.findViewById(R.id.card).setOnClickListener(new View.OnClickListener(){
+	         //   @Override
+	         //   public void onClick(View v){
+		     //       Toast.makeText(mContext,"点击了"+position,Toast.LENGTH_LONG);
+	         //   }
+            //});
+            //setupItem(view, LIBRARIES[position]);
         }
 
         container.addView(view);
