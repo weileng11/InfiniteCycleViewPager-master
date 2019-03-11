@@ -3,6 +3,7 @@ package com.gigamole.sample.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import com.gigamole.sample.screens.HorizontalPagerFragment;
 import com.gigamole.sample.screens.TwoWayPagerFragment;
 
 /**
@@ -27,7 +28,7 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
             case HORIZONTAL:
             
             default:
-                return new HorizontalPagerFragment1();
+                return new HorizontalPagerFragment();
         }
     }
 
